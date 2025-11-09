@@ -1,10 +1,10 @@
-# Welcome to Agile Methodology Guide
+# Welcome to Agile Mindset Guide
 
-This comprehensive guide covers agile methodology, DevOps practices, and frameworks to help teams deliver value efficiently and continuously.
+This comprehensive guide covers agile mindset, DevOps practices, and frameworks to help teams deliver value efficiently and continuously.
 
 ## What is Agile?
 
-Agile is a project management and software development methodology that emphasizes:
+Agile is a project management and software development mindset that emphasizes:
 
 - **Individuals and interactions** over processes and tools
 - **Working software** over comprehensive documentation  
