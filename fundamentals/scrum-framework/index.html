@@ -1,0 +1,831 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Comprehensive guide to agile methodology and practices" name="description"/>
+<meta content="Alex" name="author"/>
+<link href="https://alex.github.io/agile/fundamentals/scrum-framework/" rel="canonical"/>
+<link href="../principles/" rel="prev"/>
+<link href="../agile-vs-devops/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.23" name="generator"/>
+<title>Scrum Framework - Agile Methodology Guide</title>
+<link href="../../assets/stylesheets/main.84d31ad4.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="purple" data-md-color-primary="purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#the-scrum-framework-a-complete-guide">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Agile Methodology Guide" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Agile Methodology Guide">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Agile Methodology Guide
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Scrum Framework
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="purple" data-md-color-media="" data-md-color-primary="purple" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="purple" data-md-color-media="" data-md-color-primary="purple" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../introduction/">
+          
+  
+  
+  Fundamentals
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Agile Methodology Guide" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Agile Methodology Guide">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Agile Methodology Guide
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    Fundamentals
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Fundamentals
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
+    Introduction
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../principles/">
+<span class="md-ellipsis">
+    Agile Principles
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Scrum Framework
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Scrum Framework
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-scrum">
+<span class="md-ellipsis">
+      What is Scrum?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-principles">
+<span class="md-ellipsis">
+      Core Principles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-scrum-team">
+<span class="md-ellipsis">
+      The Scrum Team
+    </span>
+</a>
+<nav aria-label="The Scrum Team" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#product-owner">
+<span class="md-ellipsis">
+      Product Owner
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scrum-master">
+<span class="md-ellipsis">
+      Scrum Master
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#development-team">
+<span class="md-ellipsis">
+      Development Team
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scrum-events-ceremonies">
+<span class="md-ellipsis">
+      Scrum Events (Ceremonies)
+    </span>
+</a>
+<nav aria-label="Scrum Events (Ceremonies)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sprint">
+<span class="md-ellipsis">
+      Sprint
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sprint-planning">
+<span class="md-ellipsis">
+      Sprint Planning
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#daily-scrum">
+<span class="md-ellipsis">
+      Daily Scrum
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sprint-review">
+<span class="md-ellipsis">
+      Sprint Review
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sprint-retrospective">
+<span class="md-ellipsis">
+      Sprint Retrospective
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scrum-artifacts">
+<span class="md-ellipsis">
+      Scrum Artifacts
+    </span>
+</a>
+<nav aria-label="Scrum Artifacts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#product-backlog">
+<span class="md-ellipsis">
+      Product Backlog
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sprint-backlog">
+<span class="md-ellipsis">
+      Sprint Backlog
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#product-increment">
+<span class="md-ellipsis">
+      Product Increment
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#definition-of-done-dod">
+<span class="md-ellipsis">
+      Definition of Done (DoD)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estimation-and-metrics">
+<span class="md-ellipsis">
+      Estimation and Metrics
+    </span>
+</a>
+<nav aria-label="Estimation and Metrics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#story-points">
+<span class="md-ellipsis">
+      Story Points
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#velocity">
+<span class="md-ellipsis">
+      Velocity
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#burndown-charts">
+<span class="md-ellipsis">
+      Burndown Charts
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices">
+<span class="md-ellipsis">
+      Best Practices
+    </span>
+</a>
+<nav aria-label="Best Practices" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getting-started">
+<span class="md-ellipsis">
+      Getting Started
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-anti-patterns-to-avoid">
+<span class="md-ellipsis">
+      Common Anti-Patterns to Avoid
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#continuous-improvement">
+<span class="md-ellipsis">
+      Continuous Improvement
+    </span>
+</a>
+<nav aria-label="Continuous Improvement" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#retrospective-techniques">
+<span class="md-ellipsis">
+      Retrospective Techniques
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scrum-process-flow">
+<span class="md-ellipsis">
+      Scrum Process Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../agile-vs-devops/">
+<span class="md-ellipsis">
+    Agile vs DevOps
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-scrum">
+<span class="md-ellipsis">
+      What is Scrum?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-principles">
+<span class="md-ellipsis">
+      Core Principles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-scrum-team">
+<span class="md-ellipsis">
+      The Scrum Team
+    </span>
+</a>
+<nav aria-label="The Scrum Team" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#product-owner">
+<span class="md-ellipsis">
+      Product Owner
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scrum-master">
+<span class="md-ellipsis">
+      Scrum Master
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#development-team">
+<span class="md-ellipsis">
+      Development Team
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scrum-events-ceremonies">
+<span class="md-ellipsis">
+      Scrum Events (Ceremonies)
+    </span>
+</a>
+<nav aria-label="Scrum Events (Ceremonies)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sprint">
+<span class="md-ellipsis">
+      Sprint
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sprint-planning">
+<span class="md-ellipsis">
+      Sprint Planning
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#daily-scrum">
+<span class="md-ellipsis">
+      Daily Scrum
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sprint-review">
+<span class="md-ellipsis">
+      Sprint Review
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sprint-retrospective">
+<span class="md-ellipsis">
+      Sprint Retrospective
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scrum-artifacts">
+<span class="md-ellipsis">
+      Scrum Artifacts
+    </span>
+</a>
+<nav aria-label="Scrum Artifacts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#product-backlog">
+<span class="md-ellipsis">
+      Product Backlog
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sprint-backlog">
+<span class="md-ellipsis">
+      Sprint Backlog
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#product-increment">
+<span class="md-ellipsis">
+      Product Increment
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#definition-of-done-dod">
+<span class="md-ellipsis">
+      Definition of Done (DoD)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estimation-and-metrics">
+<span class="md-ellipsis">
+      Estimation and Metrics
+    </span>
+</a>
+<nav aria-label="Estimation and Metrics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#story-points">
+<span class="md-ellipsis">
+      Story Points
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#velocity">
+<span class="md-ellipsis">
+      Velocity
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#burndown-charts">
+<span class="md-ellipsis">
+      Burndown Charts
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices">
+<span class="md-ellipsis">
+      Best Practices
+    </span>
+</a>
+<nav aria-label="Best Practices" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getting-started">
+<span class="md-ellipsis">
+      Getting Started
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-anti-patterns-to-avoid">
+<span class="md-ellipsis">
+      Common Anti-Patterns to Avoid
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#continuous-improvement">
+<span class="md-ellipsis">
+      Continuous Improvement
+    </span>
+</a>
+<nav aria-label="Continuous Improvement" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#retrospective-techniques">
+<span class="md-ellipsis">
+      Retrospective Techniques
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scrum-process-flow">
+<span class="md-ellipsis">
+      Scrum Process Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="the-scrum-framework-a-complete-guide">The Scrum Framework: A Complete Guide</h1>
+<p>Scrum is the most widely adopted Agile framework for managing product development. It provides a structured yet flexible approach to delivering valuable software through iterative development and continuous improvement.</p>
+<h2 id="what-is-scrum">What is Scrum?</h2>
+<p>Scrum is a lightweight framework that helps teams work together to develop, deliver, and sustain complex products. It's built on empirical process control theory, emphasizing transparency, inspection, and adaptation.</p>
+<h2 id="core-principles">Core Principles</h2>
+<p>Scrum is founded on three pillars:</p>
+<ul>
+<li><strong>Transparency</strong> - All aspects of the process (work, progress, goals, and challenges) are visible to those responsible  for the outcome</li>
+<li><strong>Inspection</strong> - Scrum artifacts(Product Backlog, Sprint Backlog, Increment/Done) and progress are frequently inspected to detect variances</li>
+<li><strong>Adaptation</strong> - Adjustments are made when deviations are detected</li>
+</ul>
+<h2 id="the-scrum-team">The Scrum Team</h2>
+<h3 id="product-owner">Product Owner</h3>
+<ul>
+<li>Manages the Product Backlog</li>
+<li>Defines acceptance criteria and priorities</li>
+<li>Acts as the voice of the customer</li>
+</ul>
+<h3 id="scrum-master">Scrum Master</h3>
+<ul>
+<li>Facilitates Scrum events</li>
+<li>Removes impediments/obstacles for the team</li>
+<li>Coaches the team on Scrum practices</li>
+</ul>
+<h3 id="development-team">Development Team</h3>
+<ul>
+<li>Develops the product increment</li>
+<li>Self-organizes to complete work</li>
+<li>Typically 3-9 cross-functional members</li>
+</ul>
+<h2 id="scrum-events-ceremonies">Scrum Events (Ceremonies)</h2>
+<h3 id="sprint">Sprint</h3>
+<div class="admonition info">
+<p class="admonition-title">Sprint Overview</p>
+<p>A time-boxed iteration (usually 1-4 weeks) during which a potentially shippable product increment is created.</p>
+</div>
+<h3 id="sprint-planning">Sprint Planning</h3>
+<p><strong>Purpose:</strong> Plan the work for the upcoming sprint<br/>
+<strong>Duration:</strong> Up to 8 hours for a 4-week sprint  </p>
+<p><strong>Key questions:</strong>
+1. What can be delivered in this sprint?
+2. How will the work be accomplished?</p>
+<h3 id="daily-scrum">Daily Scrum</h3>
+<p><strong>Purpose:</strong> Synchronize team activities<br/>
+<strong>Duration:</strong> 15 minutes  </p>
+<p><strong>Three questions:</strong>
+1. What did I do yesterday?
+2. What will I do today?
+3. Are there any impediments?</p>
+<h3 id="sprint-review">Sprint Review</h3>
+<p><strong>Purpose:</strong> To present the completed product increment to stakeholders<br/>
+<strong>Focus:</strong> Gather constructive feedback, and inform future backlog adjustments.<br/>
+<strong>Participants:</strong> Scrum Team + Stakeholders</p>
+<h3 id="sprint-retrospective">Sprint Retrospective</h3>
+<p><strong>Purpose:</strong> Inspect the team's process and plan improvements<br/>
+<strong>Focus:</strong> What went well, what could improve, what to commit to<br/>
+<strong>Participants:</strong> Scrum Team (Product Owner, Scrum Master, Development Team)</p>
+<h2 id="scrum-artifacts">Scrum Artifacts</h2>
+<h3 id="product-backlog">Product Backlog</h3>
+<p>Ordered list of features and requirements for the product, prioritized by business value.</p>
+<p><strong>Example user story format:</strong>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>As a [user type], I want [goal] so that [benefit]
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>Acceptance Criteria:
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>- Given [context], when [action], then [outcome]
+</code></pre></div></p>
+<h3 id="sprint-backlog">Sprint Backlog</h3>
+<p>Product Backlog items selected for the sprint plus the plan for delivering them.</p>
+<h3 id="product-increment">Product Increment</h3>
+<p>Sum of all completed items that meet the Definition of Done.</p>
+<h2 id="definition-of-done-dod">Definition of Done (DoD)</h2>
+<p>A shared understanding of completion criteria:</p>
+<ul>
+<li>[ ] Code is written and reviewed</li>
+<li>[ ] Tests are written and passing</li>
+<li>[ ] Documentation is updated</li>
+<li>[ ] Product Owner has accepted the work</li>
+</ul>
+<h2 id="estimation-and-metrics">Estimation and Metrics</h2>
+<h3 id="story-points">Story Points</h3>
+<p>Relative sizing using Fibonacci sequence (1, 2, 3, 5, 8, 13, 21) focusing on complexity rather than time.</p>
+<h3 id="velocity">Velocity</h3>
+<p>Amount of work completed in a sprint, used for planning future sprints.</p>
+<h3 id="burndown-charts">Burndown Charts</h3>
+<p>Visual representation of remaining work in a sprint or release.</p>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="getting-started">Getting Started</h3>
+<ol>
+<li>Form the team with proper roles</li>
+<li>Create initial Product Backlog</li>
+<li>Establish Definition of Done</li>
+<li>Plan and execute first sprint</li>
+</ol>
+<h3 id="common-anti-patterns-to-avoid">Common Anti-Patterns to Avoid</h3>
+<div class="admonition warning">
+<p class="admonition-title">Scrum Anti-Patterns</p>
+<p><strong>Scrum-but</strong>: Skipping key ceremonies or practices<br/>
+<strong>Mini-waterfall</strong>: Treating sprints as sequential phases<br/>
+<strong>Proxy Product Owner</strong>: Decision-making by non-PO  </p>
+</div>
+<h2 id="continuous-improvement">Continuous Improvement</h2>
+<h3 id="retrospective-techniques">Retrospective Techniques</h3>
+<ul>
+<li><strong>Start, Stop, Continue</strong> - Simple improvement format</li>
+<li><strong>5 Whys</strong> - Root cause analysis of a problem</li>
+<li>Focus on actionable improvements each sprint</li>
+</ul>
+<h2 id="scrum-process-flow">Scrum Process Flow</h2>
+<pre class="mermaid"><code>graph TD
+    A[Product Backlog] --&gt; B[Sprint Planning]
+    B --&gt; C[Sprint Backlog]
+    C --&gt; D[Sprint Execution]
+    D --&gt; E[Daily Scrum]
+    E --&gt; D
+    D --&gt; F[Sprint Review]
+    F --&gt; G[Sprint Retrospective]
+    G --&gt; H[Product Increment]
+    H --&gt; A
+    F --&gt; A
+
+    style A fill:red
+    style C fill:red
+    style H fill:green</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>Scrum provides a proven framework for teams to deliver value incrementally while continuously improving. Success requires commitment to its principles, consistent practice, and willingness to adapt based on experience and feedback.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+</body>
+</html>
